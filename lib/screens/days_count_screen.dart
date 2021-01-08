@@ -13,9 +13,9 @@ class DaysCountScreen extends StatefulWidget {
 class _DaysCountScreenState extends State<DaysCountScreen> {
   @override
   Widget build(BuildContext context) {
-    DateTime startDate = DateTime(2018, 9, 9);
-    DateTime currentDate = DateTime.now();
-    final differenceDate = currentDate.difference(startDate).inDays;
+    DateTime _startDate = DateTime(2018, 9, 9);
+    DateTime _currentDate = DateTime.now();
+    final _differenceDate = _currentDate.difference(_startDate).inDays;
 
     return Scaffold(
       body: Container(
@@ -41,7 +41,7 @@ class _DaysCountScreenState extends State<DaysCountScreen> {
                           milliseconds: 100,
                         ),
                         text: [
-                          '${differenceDate.toString()} Days',
+                          '${_differenceDate.toString()} Days',
                         ],
                         textStyle: TextStyle(
                             fontWeight: FontWeight.bold,

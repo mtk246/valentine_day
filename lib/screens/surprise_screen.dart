@@ -8,14 +8,14 @@ class SurpriseScreen extends StatefulWidget {
 }
 
 class _SurpriseScreenState extends State<SurpriseScreen> {
-  bool viewWidget = false;
+  bool _viewWidget = false;
 
   void showWidget() {
     setState(() {
-      if (viewWidget == false) {
-        viewWidget = true;
+      if (_viewWidget == false) {
+        _viewWidget = true;
       } else {
-        viewWidget = false;
+        _viewWidget = false;
       }
     });
   }
@@ -66,17 +66,17 @@ class _SurpriseScreenState extends State<SurpriseScreen> {
                                 children: [
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_1_circle,
-                                    'Item 1',
+                                    'Wireless Mouse',
                                   ),
                                   buildSizedBox(),
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_2_circle,
-                                    'Item 2',
+                                    'Gold Clip',
                                   ),
                                   buildSizedBox(),
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_3_circle,
-                                    'Item 3',
+                                    'Dress',
                                   ),
                                 ],
                               ),
@@ -87,7 +87,7 @@ class _SurpriseScreenState extends State<SurpriseScreen> {
                       // buildRaisedButton(context, launchInApp),
                     ],
                   ),
-                  visible: viewWidget,
+                  visible: _viewWidget,
                   maintainAnimation: true,
                   maintainSize: false,
                   maintainState: true,

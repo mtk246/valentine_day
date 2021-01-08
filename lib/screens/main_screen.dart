@@ -17,7 +17,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  void changeTextOnClick() {
+  void _changeTextOnClick() {
     setState(() {
       if (contentData.isFinished()) {
         contentData.reset();
@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                             MaterialCommunityIcons.heart,
                             color: Theme.of(context).primaryColor,
                           ),
-                          onPressed: changeTextOnClick,
+                          onPressed: _changeTextOnClick,
                           splashColor: Colors.grey,
                           splashRadius: 10,
                         ),
@@ -68,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
                               fontFamily: 'BreeSerif',
                             ),
                           ),
-                          onTap: changeTextOnClick,
+                          onTap: _changeTextOnClick,
                         ),
                       ],
                     ),

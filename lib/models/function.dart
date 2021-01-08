@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bordered_text/bordered_text.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 Widget buildText(String title) {
   return BorderedText(
