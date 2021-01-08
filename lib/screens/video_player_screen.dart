@@ -14,7 +14,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.asset('assets/videos/Polaroid.mp4');
+    _controller = VideoPlayerController.asset('assets/videos/BigBuckBunny.mp4');
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
     _controller.setVolume(1.0);
