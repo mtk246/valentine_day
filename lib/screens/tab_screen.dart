@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:valentine_day/screens/surprise_screen.dart';
 import 'days_count_screen.dart';
 import 'package:valentine_day/screens/main_screen.dart';
+import 'video_player_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -40,6 +42,14 @@ class _TabsScreenState extends State<TabsScreen> {
         'page': DaysCountScreen(),
         'title': 'Love you Baby',
       },
+      {
+        'page': SurpriseScreen(),
+        'title': 'What\'s in the box?',
+      },
+      {
+        'page': VideoPlayerScreen(),
+        'title': 'Video For You',
+      },
     ];
     super.initState();
   }
@@ -64,15 +74,19 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Theme.of(context).accentColor,
+        type: BottomNavigationBarType.shifting,
+        unselectedItemColor: Colors.blueGrey,
+        selectedItemColor: Theme.of(context).primaryColor,
         currentIndex: _selectedPageIndex,
+        elevation: 5,
         onTap: _selectedPage,
         items: [
           buildBottomNavigationItem(
               MaterialCommunityIcons.heart, 'Love Quotes'),
           buildBottomNavigationItem(Icons.calendar_today, 'Days Count'),
+          buildBottomNavigationItem(
+              MaterialCommunityIcons.gift, 'Surprise Gift'),
+          buildBottomNavigationItem(Icons.ondemand_video_rounded, 'Video'),
         ],
       ),
     );

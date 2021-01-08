@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -16,18 +18,13 @@ class _DaysCountScreenState extends State<DaysCountScreen> {
     final differenceDate = currentDate.difference(startDate).inDays;
 
     return Scaffold(
-      body: Center(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: boxDecoration(),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Container(
-              height: double.infinity,
-              width: double.infinity,
+      body: Container(
+        decoration: buildBoxDecoration(),
+        child: Center(
+          child: Container(
+            width: double.infinity,
+            child: SingleChildScrollView(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   buildText('We\'ve been falling in love for'),
                   Stack(
