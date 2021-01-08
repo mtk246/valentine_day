@@ -66,17 +66,17 @@ class _SurpriseScreenState extends State<SurpriseScreen> {
                                 children: [
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_1_circle,
-                                    'Wireless Mouse',
+                                    'Itme 1',
                                   ),
                                   buildSizedBox(),
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_2_circle,
-                                    'Gold Clip',
+                                    'Itme 2',
                                   ),
                                   buildSizedBox(),
                                   buildHiddenText(
                                     MaterialCommunityIcons.numeric_3_circle,
-                                    'Dress',
+                                    'Itme 3',
                                   ),
                                 ],
                               ),
