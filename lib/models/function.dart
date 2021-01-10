@@ -1,5 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bordered_text/bordered_text.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import '../screens/tab_screen.dart';
 
@@ -15,37 +15,20 @@ Widget buildAnimatedSplashScreen(BuildContext context, dynamic asset) {
 }
 
 Widget buildText(String title) {
-  return BorderedText(
-    strokeWidth: 0.8,
-    strokeColor: Colors.red,
-    child: Text(
-      title,
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.white,
-        fontFamily: 'DancingScript',
-        fontSize: 35,
-        fontWeight: FontWeight.bold,
-      ),
+  return Text(
+    title,
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      color: Colors.white,
+      fontFamily: 'DancingScript',
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
     ),
   );
 }
 
 Widget buildTextSurpriseCaption(String title) {
-  return BorderedText(
-    strokeWidth: 0.5,
-    strokeColor: Colors.red,
-    child: Text(
-      title,
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.white,
-        fontFamily: 'DancingScript',
-        fontSize: 30,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  );
+  return buildText(title);
 }
 
 buildBoxDecoration() {
@@ -116,5 +99,31 @@ Widget buildRaisedButton(BuildContext context, Function onPressed) {
       borderRadius: BorderRadius.circular(20),
     ),
     splashColor: Colors.blueGrey,
+  );
+}
+
+Widget buildCircleAvater(BuildContext ctx, String title, String personName) {
+  return Column(
+    children: <Widget>[
+      CircleAvatar(
+        radius: 55,
+        backgroundImage: AssetImage('assets/images/heart_bg_profile.png'),
+        child: CircleAvatar(
+          radius: 50,
+          backgroundImage: AssetImage(title),
+          backgroundColor: Colors.white.withOpacity(0.3),
+        ),
+      ),
+      Text(
+        personName,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'BreeSerif',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ],
   );
 }
