@@ -40,7 +40,7 @@ class _TabsScreenState extends State<TabsScreen> {
       },
       {
         'page': DaysCountScreen(),
-        'title': 'Love you Baby',
+        'title': 'Love you',
       },
       {
         'page': SurpriseScreen(),
