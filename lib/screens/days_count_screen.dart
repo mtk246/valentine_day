@@ -52,6 +52,29 @@ class _DaysCountScreenState extends State<DaysCountScreen> {
                     ],
                   ),
                   buildText('and still counting!'),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      buildCircleAvater(
+                        context,
+                        'assets/images/person1.jpg',
+                        'Person 1',
+                      ),
+                      Icon(
+                        MaterialCommunityIcons.heart,
+                        size: 50,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      buildCircleAvater(
+                        context,
+                        'assets/images/person2.jpeg',
+                        'Person 2',
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
